@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import {PizzaTranslator} from './translate.js';
 
 export default class App extends React.Component {
   render() {
@@ -7,20 +8,22 @@ export default class App extends React.Component {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <View style={styles.container}>
+      <View>
+         <PizzaTranslator />
         <Image source={pic} style={{width: 193, height: 110}}/>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
         <Greeting name='Diljeet' />
         <Greeting name='Mr Kakkar' />
         <Greeting name='Mr Diljeet Kakkar' />
         <Blink text='I love to blink' />
-        <Blink text='Yes blinking is so great' />
-        <Blink text='Why did they ever take this out of HTML' />
-        <Blink text='Look at me look at me look at me' />
-
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
+        <View style={{width: 20, height: 10, backgroundColor: 'steelblue'}} />
+        <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+        </View>
       </View>
     );
   }
